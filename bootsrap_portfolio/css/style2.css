@@ -2,7 +2,6 @@ body,
 body .banner,
 body .work{
     background: #343a40;
-    
 }
 
 body .banner .container .title,
@@ -13,6 +12,8 @@ body .about .container .title,
 body .testimonials .heading{
     color: white;
 }
+
+
 
 body #main-wrapper .content-body .card-body .user-bx span{
     font-size: 15px;
