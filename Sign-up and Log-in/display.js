@@ -5,5 +5,7 @@ document.querySelector('.signIn').addEventListener('click', function () {
 });
 
 document.querySelector('.signUp').addEventListener('click', function () {
-    location.reload();
-  });
+  location.reload();
+});
+
+
