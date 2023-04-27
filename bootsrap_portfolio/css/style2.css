@@ -153,8 +153,12 @@ body .content-body .container-fluid .invoice-card-row.active{
     text-transform: capitalize;
 }
 
-body .las {
+body .user-bx .meta{
     cursor: pointer;
+    background: #20c997;
+    margin-left: 0;
+    padding: 3px;
+    border-radius: 10px;
 }
 
 
