@@ -101,3 +101,8 @@ document.querySelector(".popup .button").addEventListener("click", function () {
     alert("fill in the required details");
   }
 });
+
+
+document.querySelector("#signal").addEventListener("click", function() {
+  document.querySelector(".invoice-card-row").classList.remove("active");
+})

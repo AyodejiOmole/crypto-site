@@ -36,6 +36,18 @@ body .col-md-6 .card-body .me-auto p{
     color: rgba(91, 207, 197, 0.3);
 }
 
+body .content-body .container-fluid .invoice-card-row h2{
+    font-size: 20px;
+}
+
+
+body .content-body .container-fluid .invoice-card-row.active{
+    opacity: 0;
+    position: absolute;
+    top: -150%;
+}
+
+
 .popup{
     position: absolute;
     top: -150%;
@@ -114,6 +126,8 @@ body .col-md-6 .card-body .me-auto p{
     border-radius: 10px;
     cursor: pointer;
 }
+
+
 
 /* landing page */
 .body .header .container .logo p{
