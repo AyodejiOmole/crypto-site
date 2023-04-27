@@ -34,7 +34,8 @@ document.getElementById("btn").addEventListener('click', function () {
             set(ref(database, 'users/' + user.uid), {
                 email: registerEmail,
                 name: registerName,
-                balance: 0
+                balance: 0,
+                profit: 0
             }).then(() => {
                 // The user is navigated to the dashboard once the collection in the database has been created.  
                 window.location.assign("../bootsrap_portfolio/index-2.html");
