@@ -55,6 +55,11 @@ body .col-md-6 .card-body .me-auto p{
 
 body .content-body .container-fluid .invoice-card-row h2{
     font-size: 20px;
+    
+}
+
+body .content-body .container-fluid .invoice-card-row{
+    margin: 50px;
 }
 
 
