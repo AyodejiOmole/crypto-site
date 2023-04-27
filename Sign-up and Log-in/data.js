@@ -30,18 +30,20 @@ document.getElementById("btn").addEventListener('click', function () {
             // const user = userCredential.user;
             const user = auth.currentUser;
 
-            // const database_ref = database.getReference();
-
-            const user_data = {
+            // Creates a collection for each user using an id unique to them in the firebase realtime database as they register using firebase auth. 
+            set(ref(database, 'users/' + user.uid), {
                 email: registerEmail,
                 name: registerName,
                 balance: 0
-            }
+            }).then(() => {
+                // The user is navigated to the dashboard once the collection in the database has been created.  
+                window.location.assign("../bootsrap_portfolio/index-2.html");
 
-            // database_ref.child('users/' + user.uid).set(user_data);
-            set(ref(database, 'users/' + user.uid), user_data);
-
-            window.location.assign("../bootsrap_portfolio/index-2.html");
+                // Immediately sets a local storage of the id of the user. This is to enables the dashboard retrieve the details of a particular user using their id that we can now get from local storage.
+                window.localStorage.setItem("id", user.uid);
+            }).catch((error) => {
+                console.log(error.message);
+            })            
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -60,8 +62,14 @@ document.getElementById("btn1").addEventListener('click', function () {
 
     signInWithEmailAndPassword(auth, registerEmail, registerPassword) 
         .then((userCredential) => {
-            const user = userCredential.user;
+            // const user = userCredential.user;
+            const user = auth.currentUser;
+            
+            console.log(user.uid);
+            // Immediately sets a local storage of the id of the user. This is to enables the dashboard retrieve the details of a particular user using their id that we can now get from local storage.
+            window.localStorage.setItem("id", user.uid);
             window.location.assign("../bootsrap_portfolio/index-2.html");
+            
             console.log("it is working");
         })
         .catch((error) => {

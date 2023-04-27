@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="css/style2.css">
 	
 </head>
-<body>
+<body id="dashboard_body">
 
     <!--*******************
         Preloader start
@@ -777,7 +777,7 @@
 						<a class="nav-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown">
 							<!-- <img src="images/profile/pic1.jpg" width="20" alt=""> -->
 							<div class="header-info ms-3">
-								<span class="font-w600 " ><p id="users-name">Hi Welcome</p></span>
+								<span class="font-w600 "><p id="users-name">Hi Welcome</p></span>
 								<small class="text-end font-w400"><p id="users-email"></p></small>
 							</div>
 						</a>
@@ -1032,7 +1032,7 @@
 											<img class="pattern-img" src="images/pattern/pattern6.png" alt="">
 											<div class="card-info text-white">
 												<img src="images/pattern/circle.png" class="mb-4" alt="">
-												<h2 class="text-white card-balance">$0.00</h2>
+												<h2 class="text-white card-balance" id="user-balance">$0.00</h2>
 												<p class="fs-16">Wallet Balance</p>
 												<span>Available balance in USD</span>
 											</div>
@@ -1781,6 +1781,7 @@
 	
 	<!-- Dashboard 1 -->
 	<script src="js/dashboard/dashboard-1.js"></script>
+	<script type="module" src="js/dashboard/retrieve.js"></script>
 	
 
     <script src="js/custom.min.js"></script>
