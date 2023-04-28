@@ -17,6 +17,39 @@ if (user !== null) {
 
 
 
+const btn = document.querySelector('#bitcoin');
+
+btn.addEventListener('click', () => {
+  const codeToCopy = 'bc1q9m7t3dk7y7se06zfsckah97c5up96x956l28rh';
+  navigator.clipboard.writeText(codeToCopy);
+  alert('copied to clipboard');
+});
+
+const btn1 = document.querySelector('#ethereum');
+
+btn1.addEventListener('click', () => {
+  const codeToCopy = '0xe678a83aD3727d3f2C54D25A1a5C30A8A9aeBF1E';
+  navigator.clipboard.writeText(codeToCopy);
+  alert('copied to clipboard');
+});
+
+const btn2 = document.querySelector('#usdt');
+
+btn2.addEventListener('click', () => {
+  const codeToCopy = '0xe678a83aD3727d3f2C54D25A1a5C30A8A9aeBF1E';
+  navigator.clipboard.writeText(codeToCopy);
+  alert('copied to clipboard');
+});
+const btn3 = document.querySelector('#btc-cash');
+
+btn3.addEventListener('click', () => {
+  const codeToCopy = 'qp4qyn84gghfv204uzzd83l3slg60zq5ngyc4l0xcj';
+  navigator.clipboard.writeText(codeToCopy);
+  alert('copied to clipboard');
+});
+
+
+
 document.querySelector("#show-payment").addEventListener("click", function () {
     document.querySelector(".popup").classList.add("active");
 
@@ -50,3 +83,8 @@ document.querySelector(".popup .button").addEventListener("click", function () {
     alert("fill in the required details");
   }
 });
+
+
+document.querySelector("#signal").addEventListener("click", function() {
+  document.querySelector(".invoice-card-row").classList.remove("active");
+})

@@ -5,6 +5,7 @@ const user_name = document.getElementById("users-name");
 const balance = document.getElementById("user-balance");
 const log_out = document.getElementById("logout");
 
+const profit = document.getElementById("user-profit");
 // Makes use of the DOMContentLoaded, i.e. the event that is triggered as the HTML content - only the HTML content - of the document gets loaded, document event to retrieve the details of the user from the database and populate the necessary regions.
 document.addEventListener("DOMContentLoaded", async () => { 
     try {
@@ -18,7 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         user_name.innerHTML = `Hi, ${snapshot.name}`;
 
         // Updates the balnce displayed on the dashboard using the data gotten from the realtime database.
-        balance.innerHTML = `$${snapshot.balance}`
+        balance.innerHTML = `$${snapshot.balance}`;
+
+        // Updates the profit balnce displayed on the dashboard using the data gotten from the realtime database.
+        profit.innerHTML = `$${snapshot.profit}`
+        
     } catch(error) {
         console.log(error);
         console.log(error.message);
