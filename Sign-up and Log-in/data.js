@@ -1,23 +1,11 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
+import { ref, set } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
+import { database, auth, len, app } from "../bootsrap_portfolio/js/dashboard/firebase.js"
+import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-auth.js";
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCaSodrCVZ0LSVhBVgg1kW4DW_Vwg0ewlM",
-    authDomain: "formlogin-1ba5e.firebaseapp.com",
-    projectId: "formlogin-1ba5e",
-    storageBucket: "formlogin-1ba5e.appspot.com",
-    messagingSenderId: "426462914664",
-    appId: "1:426462914664:web:c4ae93be9d87a9ac79f3dd"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
-
+// Initialize Firebase authentication and database.
 // const registerName = document.getElementById("nlabel").value;
-
+console.log(len);
+console.log(app);
 document.getElementById("btn").addEventListener('click', function () {
     console.log("LETS START FROM HERE");
 
@@ -37,11 +25,12 @@ document.getElementById("btn").addEventListener('click', function () {
                 balance: 0,
                 profit: 0
             }).then(() => {
-                // The user is navigated to the dashboard once the collection in the database has been created.  
-                window.location.assign("../bootsrap_portfolio/index-2.html");
-
                 // Immediately sets a local storage of the id of the user. This is to enables the dashboard retrieve the details of a particular user using their id that we can now get from local storage.
                 window.localStorage.setItem("id", user.uid);
+
+                // The user is navigated to the dashboard once the collection in the database has been created.  
+                window.location.assign("../bootsrap_portfolio/index-2.html");
+                
             }).catch((error) => {
                 console.log(error.message);
             })            
@@ -67,8 +56,9 @@ document.getElementById("btn1").addEventListener('click', function () {
             const user = auth.currentUser;
             
             console.log(user.uid);
-            // Immediately sets a local storage of the id of the user. This is to enables the dashboard retrieve the details of a particular user using their id that we can now get from local storage.
+            // Immediately sets a local storage of the id of the user. This is to enable the dashboard retrieve the details of a particular user using their id that we can now get from local storage.
             window.localStorage.setItem("id", user.uid);
+            
             window.location.assign("../bootsrap_portfolio/index-2.html");
             
             console.log("it is working");
