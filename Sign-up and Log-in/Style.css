@@ -15,17 +15,23 @@ body {
 }
 .container {
     width: 900px;
-    height: 500px;
+    height: auto;
     background-color: #fff;
-    position: absolute;
+    /* position: absolute; */
+    display: flex;
+    justify-content: space-between;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-    top: 150px;
-    left: 300px;
+    /* top: 150px;
+    left: 300px; */
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: auto; */
     border-radius: 20px;
 }
 .img-slider{
     width: 400px;
-    height: 500px;
+    height: auto;
     border-right: 2px solid #D6FAE7;
     border-radius: 20px;
     /* border: 1px solid #000; */
@@ -55,9 +61,10 @@ body {
     margin-top: 120px;
 }
 .content{
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    right:110px;
+    right:110px; */
+    margin: auto;
     /* text-align: center; */
 }
 .content h2{
@@ -94,6 +101,18 @@ body {
 #form input {
     border:none;
     border-bottom:3px solid #0d6efd;
+    width: 350px;
+    margin: 10px 0px;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px 0px;  
+    font-family: 'Comfortaa', cursive;
+    font-weight: 800;  
+}
+
+#form select {
+    border:none;
+    border:3px solid #0d6efd;
     width: 350px;
     margin: 10px 0px;
     outline: none;
@@ -161,6 +180,8 @@ body {
         position: absolute;
         top: 150px;
         left: 120px;
+        /* display: flex;
+        flex-direction: column; */
         border-radius: 20px;
     }
     .img-slider{
@@ -264,11 +285,13 @@ body {
 @media screen and (max-width:768px) {
     .container {
         width: 700px;
+        width: 100%;
         height: 400px;
         background-color: #fff;
         position: absolute;
         top: 150px;
         left: 40px;
+        /* flex-direction: column; */
         border-radius: 20px;
         /* margin: 0px 10px; */
     }

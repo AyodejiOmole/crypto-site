@@ -4,8 +4,49 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "http
 
 // Initialize Firebase authentication and database.
 // const registerName = document.getElementById("nlabel").value;
-console.log(len);
-console.log(app);
+// console.log(len);
+// console.log(app);
+
+const countrySelect = document.getElementById("country");
+const accountSelect = document.getElementById("acct-type");
+const registerEmail = document.getElementById("eemail").value;
+const registerPassword = document.getElementById("lpassword").value;
+const registerName = document.getElementById("fname").value;
+
+const user_data = {
+    name: registerName,
+    email: registerEmail,
+    password: registerPassword,
+    country: countrySelect.value,
+    account_type: accountSelect.value,
+    balance: 0,
+    profit: 0
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+    let countries = [];
+
+    const response = await fetch("https://restcountries.com/v3.1/all");
+    const jsonData = await response.json();
+    console.log(jsonData);
+    
+    for (const value of jsonData) {
+        let country = value.name.common;
+        countries.push(country);
+    }
+
+    // Sort in alphabetical order
+    countries.sort();
+
+    countries.forEach((country) => {
+        var option = document.createElement("option");
+        option.value = country;
+        option.text = country;
+
+        countrySelect.appendChild(option);
+    });
+});
+
 document.getElementById("btn").addEventListener('click', function () {
     console.log("LETS START FROM HERE");
 
