@@ -952,7 +952,41 @@
         <div class="content-body">
             <!-- row -->
 			<div class="container-fluid">
-				 <div class="row invoice-card-row active">
+				<!-- TradingView Widget BEGIN -->
+				<div class="tradingview-widget-container">
+					<div id="tradingview_205dd"></div>
+					<div class="tradingview-widget-copyright">
+						<a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank">
+							<span class="blue-text">AAPL stock chart</span>
+						</a> by TradingView
+					</div>
+					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+					<script type="text/javascript">
+						new TradingView.widget({
+							"autosize": true,
+							"symbol": "NASDAQ:AAPL",
+							"timezone": "Etc/UTC",
+							"theme": "light",
+							"style": "1",
+							"locale": "en",
+							"toolbar_bg": "#f1f3f6",
+							"enable_publishing": true,
+							"withdateranges": true,
+							"range": "YTD",
+							"hide_side_toolbar": false,
+							"allow_symbol_change": true,
+							"details": true,
+							"hotlist": true,
+							"calendar": true,
+							"show_popup_button": true,
+							"popup_width": "1000",
+							"popup_height": "650",
+							"container_id": "tradingview_205dd"
+						});
+					</script>
+				</div>
+				<!-- TradingView Widget END -->
+				<div class="row invoice-card-row active">
 					<div class="col-xl-3 col-xxl-3 col-sm-6">
 						<div class="card bg-warning invoice-card">
 							<div class="card-body d-flex">
@@ -1687,6 +1721,7 @@
 						</div>
 					</div>
 				</div>
+				
             </div>
         </div>
         <!--**********************************

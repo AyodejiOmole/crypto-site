@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         
         // Retrieves the snapshot by calling the val() function of the response gotten above.
         const snapshot = res.val();
+        console.log(snapshot);
 
         // Updates the "Hi welcome" segment of the dashboard by adding the names of the the user gotten from the database.
         user_name.innerHTML = `Hi, ${snapshot.name}`;

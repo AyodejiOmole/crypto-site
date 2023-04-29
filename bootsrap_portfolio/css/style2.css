@@ -23,6 +23,12 @@ body #main-wrapper .content-body .card-body .user-bx span{
     background: none;
 }
 
+#tradingview_205dd {
+    height: 100vh;
+    display: block;
+    width: 100%
+}
+
 body .nav-header a p{
     margin: 20px;
     font-size: 30px;
