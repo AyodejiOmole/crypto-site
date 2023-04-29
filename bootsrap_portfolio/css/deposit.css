@@ -21,6 +21,10 @@ body .card-body .user-name .copy{
     justify-content: space-between;
 }
 
+body .card-body .user-name .copy p{
+    cursor: pointer;
+}
+
 
 body .card-body .user-name .metals{
     border: 1px solid white;
