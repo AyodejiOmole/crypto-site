@@ -429,12 +429,17 @@ body {
 }
 @media screen and (max-width:425px) {
     .container {
-        width: 300px;
-        height: 400px;
+        width: 100%;
+        height: auto;
+        display: block;
         background-color: #fff;
-        position: absolute;
+        /* position: absolute;
         top: 150px;
-        left: 30px;
+        left: 30px; */
+        bottom: 30px;
+        flex-direction: column;
+        padding-bottom: 20px;
+        padding-top: 20px;
         border-radius: 20px;
     }
     .img-slider{
@@ -444,9 +449,9 @@ body {
         margin-top: 40px;
     }
     .content{
-        position: absolute;
+        /* position: absolute;
         top: 10px;
-        right:20px;
+        right:20px; */
         text-align: center;
     }
     .content h2{
@@ -457,10 +462,12 @@ body {
     }
     .content p {
         text-align: center;
+        /* position: relative;
+        right: 70px; */
         font-family: 'Lexend', sans-serif;
         font-size: 0.8rem;
         padding:5px 0px;
-        color: #fff;
+        /* color: #fff; */
     }
     .content p  a {
         text-decoration: none;
@@ -471,37 +478,45 @@ body {
     }
     #form{
         padding-top: 10px;
+        /* padding-left: 20px;
+        padding-right: 20px; */
         /* padding-left: 80px; */
     }
     #form label {
         font-family: 'Comfortaa', cursive;
-        font-size: 0.7rem;
+        font-size: 1rem;
         font-weight: 700;
         padding: 8px 0px;
+        /* text-align: left; */
         color: #0d6efd;
     }
     #form input {
         border:none;
         border-bottom:3px solid #0d6efd;
-        width: 250px;
-        margin: 10px 0px;
+        /* width: 250px; */
+        width: 90%;
+        margin: 5px 0px;
         outline: none;
         font-size: 0.6rem;
         padding: 5px 0px;  
         font-family: 'Comfortaa', cursive;
         font-weight: 800;  
     }
+    #form select {
+        width: 90%;
+    }
     #btn{
         text-align: center;
-        padding:5px 20px ;
+        /* padding:5px 20px ; */
         position: relative;
-        left: 60px;
+        left: 0px;
         color: #fff;
         background-color: #0d6efd;
         border:none;
         outline: none;
         border-radius: 5px;
         font-size: 18px;
+        margin-top: 10px;
         font-family: 'Comfortaa', cursive;
     }
     .other{
@@ -510,13 +525,20 @@ body {
 }
 @media screen and (max-width:375px) {
     .container {
-        width: 260px;
-        height: 350px;
+        width: 100%;
+        height: auto;
         background-color: #fff;
-        position: absolute;
+        display: block;
+        /* position: absolute;
         top: 100px;
-        left: 30px;
+        left: 30px; */
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        flex-direction: column;
         border-radius: 20px;
+    }
+    .display {
+        display: none;
     }
     .img-slider{
         display: none;
@@ -525,22 +547,26 @@ body {
         margin-top: 40px;
     }
     .content{
-        position: absolute;
+        /* position: absolute;
         top: 10px;
-        right:20px;
+        right:20px; */
         text-align: center;
     }
     .content h2{
         text-align: center;
         font-size : 1.8rem;
         font-family: 'Lexend', sans-serif;
-        padding: 10px 0px 5px 0px ;
+        position: relative;
+        right: 12px;
+        /* padding: 10px 0px 5px 0px ; */
     }
     .content p {
         text-align: center;
         font-family: 'Lexend', sans-serif;
         font-size: 0.8rem;
-        padding:5px 0px;
+        position: relative;
+        right: 12px;
+        /* padding:5px 0px; */
         color: rgb(150, 148, 148);
     }
     .content p  a {
@@ -564,7 +590,7 @@ body {
     #form input {
         border:none;
         border-bottom:3px solid #1FAB89;
-        width: 200px;
+        width: 90%;
         margin: 10px 0px;
         outline: none;
         font-size: 0.6rem;
@@ -572,11 +598,15 @@ body {
         font-family: 'Comfortaa', cursive;
         font-weight: 800;  
     }
+
+    #form select {
+        width: 90%;
+    }
     #btn{
         text-align: center;
-        padding:5px 20px ;
+        /* padding:5px 20px ; */
         position: relative;
-        left: 40px;
+        /* left: 40px; */
         top: 10px;
         color: #fff;
         background-color: #1FAB89;
@@ -593,11 +623,11 @@ body {
 @media screen and (max-width:320px) {
     .container {
         width: 250px;
-        height: 400px;
+        height: auto;
         background-color: #fff;
-        position: absolute;
+        /* position: absolute;
         top: 100px;
-        left: 10px;
+        left: 10px; */
         border-radius: 20px;
     }
     .img-slider{
@@ -607,9 +637,9 @@ body {
         margin-top: 40px;
     }
     .content{
-        position: absolute;
+        /* position: absolute;
         top: 10px;
-        right:15px;
+        right:15px; */
         text-align: center;
     }
     .content h2{
@@ -646,7 +676,7 @@ body {
     #form input {
         border:none;
         border-bottom:3px solid #1FAB89;
-        width: 180px;
+        width: 90%;
         margin: 10px 0px;
         outline: none;
         font-size: 0.6rem;
@@ -657,8 +687,8 @@ body {
     #btn{
         text-align: center;
         padding:5px 20px ;
-        position: relative;
-        left: 60px;
+        /* position: relative;
+        left: 60px; */
         color: #fff;
         background-color: #1FAB89;
         border:none;
