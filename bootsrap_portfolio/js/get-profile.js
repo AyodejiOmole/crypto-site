@@ -1,12 +1,15 @@
 import { child, get } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
-import { dbRef, app } from "./firebase.js";
+import { dbRef } from "./dashboard/firebase.js";
 
-const user_name = document.getElementById("users-name");
-const balance = document.getElementById("user-balance");
-const log_out = document.getElementById("logout");
-const email = document.getElementById("users-email");
+const user_name = document.getElementById("name");
+const email = document.getElementById("email");
+const phone = document.getElementById("phone");
+const country = document.getElementById("country");
+const acctType = document.getElementById("acct");
 
-const profit = document.getElementById("user-profit");
+const name = document.getElementById("users-name");
+const mail = document.getElementById("users-email");
+
 // Makes use of the DOMContentLoaded, i.e. the event that is triggered as the HTML content - only the HTML content - of the document gets loaded, document event to retrieve the details of the user from the database and populate the necessary regions.
 document.addEventListener("DOMContentLoaded", async () => { 
     try {
@@ -18,25 +21,25 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.log(snapshot);
 
         // Updates the "Hi welcome" segment of the dashboard by adding the names of the the user gotten from the database.
-        user_name.innerHTML = `Hi, ${snapshot.name}`;
+        user_name.innerHTML = snapshot.name;
+        name.innerHTML = `Hi, ${snapshot.name}`;
 
         // Updates the balnce displayed on the dashboard using the data gotten from the realtime database.
-        balance.innerHTML = `$${snapshot.balance}`;
+        phone.innerHTML = snapshot.phone_number;
 
         // Updates the profit balnce displayed on the dashboard using the data gotten from the realtime database.
-        profit.innerHTML = `$${snapshot.profit}`
+        country.innerHTML = snapshot.country;
 
         email.innerHTML = snapshot.email;
-        
+        mail.innerHTML = snapshot.email;
+
+        acctType.innerHTML = snapshot.account_type;
     } catch(error) {
         console.log(error);
         console.log(error.message);
     }   
 });
 
-// log_out.addEventListener("click", () => {
-//     app.delete();
-// });
 
 function getData(ref) {
     // Retrieves the details of the specific user using the id that has been saved to localStorge on user login. 

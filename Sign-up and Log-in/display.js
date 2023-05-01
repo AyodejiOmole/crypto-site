@@ -1,6 +1,6 @@
 document.querySelector('.signIn').addEventListener('click', function () {
   document.querySelectorAll('.container').forEach(function (elem) {
-    elem.classList.remove('display');
+    elem.classList.toggle('display');
   });
   // var containers = document.querySelectorAll('.container');
   // for (var i = 0; i < containers.length; i++) {

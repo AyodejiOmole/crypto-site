@@ -4,27 +4,10 @@ import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from "http
 
 // Initialize Firebase authentication and database.
 // const registerName = document.getElementById("nlabel").value;
-// console.log(len);
-// console.log(app);
-
-const countrySelect = document.getElementById("country");
-const accountSelect = document.getElementById("acct-type");
-const registerEmail = document.getElementById("eemail").value;
-const registerPassword = document.getElementById("lpassword").value;
-const registerName = document.getElementById("fname").value;
-
-const user_data = {
-    name: registerName,
-    email: registerEmail,
-    password: registerPassword,
-    country: countrySelect.value,
-    account_type: accountSelect.value,
-    balance: 0,
-    profit: 0
-}
 
 document.addEventListener("DOMContentLoaded", async () => {
     let countries = [];
+    const countrySelect = document.getElementById("country");
 
     const response = await fetch("https://restcountries.com/v3.1/all");
     const jsonData = await response.json();
@@ -50,9 +33,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 document.getElementById("btn").addEventListener('click', function () {
     console.log("LETS START FROM HERE");
 
+    const countrySelect = document.getElementById("country");
+    const accountSelect = document.getElementById("acct-type");
     const registerEmail = document.getElementById("eemail").value;
     const registerPassword = document.getElementById("lpassword").value;
     const registerName = document.getElementById("fname").value;
+    const phone = document.getElementById("phone").value;
 
     createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
         .then((userCredential) => {
@@ -60,9 +46,13 @@ document.getElementById("btn").addEventListener('click', function () {
             const user = auth.currentUser;
 
             // Creates a collection for each user using an id unique to them in the firebase realtime database as they register using firebase auth. 
-            set(ref(database, 'users/' + user.uid), {
-                email: registerEmail,
+            set(ref(database, 'users2/' + user.uid), {
                 name: registerName,
+                email: registerEmail,
+                phone_number: phone,
+                password: registerPassword,
+                country: countrySelect.value,
+                account_type: accountSelect.value,
                 balance: 0,
                 profit: 0
             }).then(() => {
@@ -82,8 +72,6 @@ document.getElementById("btn").addEventListener('click', function () {
             console.log(errorMessage);
             alert(errorMessage);
         });
-
-        // window.location.assign("../bootsrap_portfolio/index-2.html");
 })
 
 document.getElementById("btn1").addEventListener('click', function () {
