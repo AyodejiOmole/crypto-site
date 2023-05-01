@@ -7,25 +7,26 @@
     <title>Log-in & Sign-up Page</title>
     <link rel="stylesheet" href="./Style.css">
 </head>
-<body>
+<body style="padding-left: 20px; padding-right: 20px;">
+<!-- <body> -->
     <div class="container" id="content01">
         <div class="img-slider">
             <h2>Welcome to Vestify</h2>
             <p>we are a community together helping thousands of people out there who are struggling </p>
-                <img src="./Images/Img1-removebg-preview.png" alt="img">
+            <img src="./Images/Img1-removebg-preview.png" alt="img">
         </div>
         <div class="content">
             <h2>Get Started</h2>
             <p class="signIn">Already have account ?  <a href="#" id="login" class="signIn">Sign In </a></p>
             <form id="form">
                 <label for="name" id="nlabel">Name</label> <br>
-                <input type="text" id="fname" placeholder="Name" autocomplete="off"> <br>
+                <input type="text" id="fname" placeholder="Name" required autocomplete="off"> <br>
 
                 <label for="email" id="elabel">Email</label> <br>
-                <input type="email" id="eemail" placeholder="Email@gmail.com" autocomplete="off"> <br>
+                <input type="email" id="eemail" placeholder="Email@gmail.com" required autocomplete="off"> <br>
 
                 <label for="phone" id="phlabel">Phone</label> <br>
-                <input type="number" id="phone" placeholder="Enter your phone number" autocomplete="off"> <br>
+                <input type="number" id="phone" placeholder="Enter your phone number" required autocomplete="off"> <br>
 
                 <label for="country" id="phlabel">Country</label> <br>
                 <select
@@ -47,7 +48,7 @@
                 </select><br> 
 
                 <label for="password" id="plabel">Password</label> <br>
-                <input type="password" name="password" id="lpassword"> <br>
+                <input type="password" name="password" id="lpassword" required> <br>
 
                 <button type="button" id="btn">Sign Up </button>
             </form>
@@ -60,7 +61,7 @@
             </div>
         </div>
     </div>
-     <div class="container display" id="content02">
+    <div class="container display" id="content02">
         <div class="img-slider">
             <h2>Welcome to Flexicom</h2>
             <p>we are a community together helping thousands of people out there who are struggling </p>
