@@ -1,4 +1,4 @@
-import { auth, app } from "./dashboard/firebase";
+import { auth } from "./dashboard/firebase";
 
 const user = auth.currentUser;
 
