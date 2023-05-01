@@ -136,7 +136,7 @@ body .content-body .container-fluid .invoice-card-row.active{
 }
 
 .popup.active{
-    top: 80%;
+    top: 60%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
      transition:top 0ms ease-in-out 0ms,
