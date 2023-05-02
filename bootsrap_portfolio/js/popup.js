@@ -25,7 +25,7 @@ const inputField = document.getElementById("tag");
 document.querySelector(".popup .button").addEventListener("click", function () {
   if (inputField && inputField.value.trim() !== "") {
     document.querySelector(".popup").classList.remove("active");
-    if(window.localStorage.getItem("balance")) {
+    if(window.localStorage.getItem("balance") === "0") {
       alert("Unfortunately, you do not have sufficient balance to withdraw!");
     } else {
       alert("withdrawal in process");
