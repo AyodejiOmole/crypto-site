@@ -442,6 +442,9 @@ body {
         padding-top: 20px;
         border-radius: 20px;
     }
+    .display {
+        display: none;
+    }
     .img-slider{
         display: none;
     }
