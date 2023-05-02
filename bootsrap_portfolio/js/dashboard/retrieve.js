@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Updates the "Hi welcome" segment of the dashboard by adding the names of the the user gotten from the database.
         user_name.innerHTML = `Hi, ${snapshot.name}`;
 
+        console.log(snapshot.balance);
+        window.localStorage.setItem("balance", snapshot.balance);
         // Updates the balnce displayed on the dashboard using the data gotten from the realtime database.
         balance.innerHTML = `$${snapshot.balance}`;
 
