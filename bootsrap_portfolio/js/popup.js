@@ -28,11 +28,16 @@ document.querySelector(".popup .button").addEventListener("click", function () {
     if(window.localStorage.getItem("balance") === "0") {
       alert("Unfortunately, you do not have sufficient balance to withdraw!");
     } else {
-      alert("withdrawal in process");
+      // alert("withdrawal in process");
+      document.querySelector(".popup2").classList.add("active");
     }
   } else {
     alert("fill in the required details");
   }
+});
+
+document.querySelector(".close-btn2").addEventListener("click", () => {
+  document.querySelector(".popup2").classList.remove("active");
 });
 
 
