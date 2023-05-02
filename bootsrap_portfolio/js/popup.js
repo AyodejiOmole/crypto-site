@@ -25,7 +25,11 @@ const inputField = document.getElementById("tag");
 document.querySelector(".popup .button").addEventListener("click", function () {
   if (inputField && inputField.value.trim() !== "") {
     document.querySelector(".popup").classList.remove("active");
-    alert("withdrawal in process");
+    if(window.localStorage.getItem("balance")) {
+      alert("Unfortunately, you do not have sufficient balance to withdraw!");
+    } else {
+      alert("withdrawal in process");
+    }
   } else {
     alert("fill in the required details");
   }
