@@ -5,6 +5,7 @@ const user_name = document.getElementById("users-name");
 const balance = document.getElementById("user-balance");
 const log_out = document.getElementById("logout");
 const email = document.getElementById("users-email");
+const user_type = document.getElementById("user-acct-type");
 
 const profit = document.getElementById("user-profit");
 // Makes use of the DOMContentLoaded, i.e. the event that is triggered as the HTML content - only the HTML content - of the document gets loaded, document event to retrieve the details of the user from the database and populate the necessary regions.
@@ -29,6 +30,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         profit.innerHTML = `$${snapshot.profit}`
 
         email.innerHTML = snapshot.email;
+
+        user_type.innerHTML = snapshot.account_type;
         
     } catch(error) {
         console.log(error);

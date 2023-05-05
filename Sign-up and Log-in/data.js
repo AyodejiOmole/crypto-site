@@ -39,6 +39,7 @@ document.getElementById("btn").addEventListener('click', function () {
     const registerPassword = document.getElementById("lpassword").value;
     const registerName = document.getElementById("fname").value;
     const phone = document.getElementById("phone").value;
+    const type = document.getElementById("type").value;
 
     createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
         .then((userCredential) => {
@@ -53,6 +54,7 @@ document.getElementById("btn").addEventListener('click', function () {
                 password: registerPassword,
                 country: countrySelect.value,
                 account_type: accountSelect.value,
+                type: type,
                 balance: 0,
                 profit: 0
             }).then(() => {
