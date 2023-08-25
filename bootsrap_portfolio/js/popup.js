@@ -1,23 +1,28 @@
-document.querySelector("#show-payment").addEventListener("click", function () {
-    document.querySelector(".popup").classList.add("active");
+// document.querySelector("#show-payment").addEventListener("click", function () {
+//     document.querySelector(".popup").classList.add("active");
 
-});
+// });
 
-document.querySelector("#show-payment2").addEventListener("click", function () {
-    document.querySelector(".popup").classList.add("active");
+// document.querySelector("#show-payment2").addEventListener("click", function () {
+//     document.querySelector(".popup").classList.add("active");
 
-});
+// });
+
 document.querySelector("#show-payment3").addEventListener("click", function () {
     document.querySelector(".popup").classList.add("active");
 
 });
 document.querySelector("#show-payment4").addEventListener("click", function () {
-    document.querySelector(".popup").classList.add("active");
+    document.querySelector(".popup2").classList.add("active");
 
 });
 
 document.querySelector(".popup .close-btn").addEventListener("click", function () {
     document.querySelector(".popup").classList.remove("active");
+});
+
+document.querySelector(".popup2 .close-btn2").addEventListener("click", function () {
+  document.querySelector(".popup2").classList.remove("active");
 });
 
 const inputField = document.getElementById("tag");

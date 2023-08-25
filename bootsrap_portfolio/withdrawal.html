@@ -26,11 +26,9 @@
 
 	<link href="css/style.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/style2.css">
-
 </head>
 
 <body id="dashboard_body">
-
 	<!--*******************
         Preloader start
     ********************-->
@@ -830,7 +828,7 @@
 						<ul aria-expanded="false">
 							<li><a href="index-2.html">Home</a></li>
 							<li><a href="deposit.html">Deposit</a></li>
-							<li><a href="withdrawal.html">withdrawal</a></li>
+							<li><a href="withdrawal.html">Withdraw</a></li>
 							<li><a href="https://vestify.netlify.app/">Logout</a></li>
 							<!-- <li><a href="transaction-details.html">Transaction Details</a></li> -->
 						</ul>
@@ -1674,15 +1672,15 @@
 									</div>
 								</div>
 							</div> -->
-							<div class="col-md-6">
+							<!-- <div class="col-md-6">
 								<div class="card progress-card">
 									<div class="card-body d-flex">
 										<div class="me-auto">
 											<h4 class="card-title">CashApp</h4>
 											<div class="d-flex align-items-center">
-												<!-- <h2 class="fs-38 mb-0">98k</h2> -->
+												<h2 class="fs-38 mb-0">98k</h2>
 												<div class="text-success transaction-caret">
-													<!-- <i class="fas fa-sort-up"></i> -->
+													<i class="fas fa-sort-up"></i>
 													<p class="mb-0">Apply for withdrawal by inputting the withdrawal
 														amount and your CashApp ID
 
@@ -1694,16 +1692,16 @@
 										<button class="btn" id="show-payment">Withdraw</button>
 									</div>
 								</div>
-							</div>
-							<div class="col-md-6">
+							</div> -->
+							<!-- <div class="col-md-6">
 								<div class="card progress-card">
 									<div class="card-body d-flex">
 										<div class="me-auto">
 											<h4 class="card-title">PayPal</h4>
 											<div class="d-flex align-items-center">
-												<!-- <h2 class="fs-38 mb-0">98k</h2> -->
+												<h2 class="fs-38 mb-0">98k</h2>
 												<div class="text-success transaction-caret">
-													<!-- <i class="fas fa-sort-up"></i> -->
+													<i class="fas fa-sort-up"></i>
 													<p class="mb-0">Apply for withdrawal by inputting the withdrawal
 														amount and your Paypal Tag
 
@@ -1715,7 +1713,7 @@
 										<button class="btn" id="show-payment2">Withdraw</button>
 									</div>
 								</div>
-							</div>
+							</div> -->
 							<div class="col-md-6">
 								<div class="card progress-card">
 									<div class="card-body d-flex">
@@ -1727,7 +1725,6 @@
 													<!-- <i class="fas fa-sort-up"></i> -->
 													<p class="mb-0">Apply for withdrawal by inputting the withdrawal
 														amount and your Bitcoin Wallet Address
-
 													</p>
 												</div>
 											</div>
@@ -1791,23 +1788,22 @@
 		<!--**********************************
            Support ticket button end
         ***********************************-->
-
-
 	</div>
 
 	<!-- popup -->
 	<div class="popup">
 		<div class="close-btn">&times;</div>
 		<div class="form">
-			<h2>withdrawal</h2>
-			<div class="form-element">
-				<label for="CashApp">withdrawal ID/Tag</label>
-				<input type="text" name="" id="tag" placeholder="paste ID/Tag here " required />
-			</div>
+			<h2>Withdrawal</h2>
 			<div class="form-element">
 				<label for="Amount">Amount</label>
 				<input type="text" class="amount" id="tag" placeholder="Enter Amount" required />
 			</div>
+			<div class="form-element">
+				<label for="CashApp">BTC Wallet Address</label>
+				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+			</div>
+			
 			<div class="form-element button">
 				<button type="submit">Withdraw</button>
 			</div>
@@ -1817,24 +1813,31 @@
 	<!-- popup -->
 	<div class="popup2">
 		<div class="close-btn2">&times;</div>
-		<p>Request a withdrawal code from the Admin of this page.</p>
-		<!-- <div class="form">
-			<h2>withdrawal</h2>
+		<!-- <p>Request a withdrawal code from the Admin of this page.</p> -->
+		<div class="form">
+			<h2>Withdrawal</h2>
 			<div class="form-element">
-				<label for="CashApp">withdrawal ID/Tag</label>
-				<input type="text" name="" id="tag" placeholder="paste ID/Tag here " required />
+				<label for="CashApp">Bank Name</label>
+				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+			</div>
+			<div class="form-element">
+				<label for="CashApp">Account Number</label>
+				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+			</div>
+			<div class="form-element">
+				<label for="CashApp">Routing Number</label>
+				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
 			</div>
 			<div class="form-element">
 				<label for="Amount">Amount</label>
 				<input type="text" class="amount" id="tag" placeholder="Enter Amount" required />
 			</div>
+			
 			<div class="form-element button">
 				<button type="submit">Withdraw</button>
 			</div>
-		</div> -->
+		</div>
 	</div>
-
-
 
 
 	<!--**********************************
@@ -1862,7 +1865,6 @@
 	<script src="js/dashboard/dashboard-1.js"></script>
 	<script type="module" src="js/dashboard/retrieve.js"></script>
 
-
 	<script src="js/custom.min.js"></script>
 	<script src="js/dlabnav-init.js"></script>
 	<!-- <script src="js/demo.js"></script> -->
@@ -1876,17 +1878,7 @@
 		});
 	</script>
 	<!-- Start of ChatBot (www.chatbot.com) code -->
-	<!-- <script type="text/javascript">
-		window.__be = window.__be || {};
-		window.__be.id = "6450f682184a9c0007282e74";
-		(function() {
-			var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
-			be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
-		})();
-	</script> -->
 	<script src="//code.tidio.co/mqe1ykpa9aprrb6dfzn8pfx0sdifeffv.js" async></script>
 	<!-- End of ChatBot code -->
 </body>
-
 </html>
