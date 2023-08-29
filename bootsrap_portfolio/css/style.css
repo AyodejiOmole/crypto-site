@@ -8870,14 +8870,24 @@ label {
 .footer {
   padding-left: 17.1875rem;
   background-color: #f6f6f6;
-  font-size: 13px; }
-  .footer .copyright {
-    padding: 0.9375rem; }
-    .footer .copyright p {
-      text-align: center;
-      margin: 0; }
-    .footer .copyright a {
-      color: var(--primary); }
+  font-size: 13px; 
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+}
+
+.footer .copyright {
+  padding: 0.9375rem; 
+}
+
+.footer .copyright p {
+  text-align: center;
+  margin: 0; 
+}
+
+.footer .copyright a {
+  color: var(--primary); 
+}
 
 [data-sidebar-style="mini"] .nav-control,
 [data-layout="horizontal"] .nav-control {

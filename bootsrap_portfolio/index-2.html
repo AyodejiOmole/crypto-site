@@ -29,7 +29,15 @@
 	
 </head>
 <body id="dashboard_body">
-
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: "en"},
+				"google_translate_element"
+			);
+		}
+	</script>
     <!--*******************
         Preloader start
     ********************-->
@@ -973,6 +981,7 @@
 				<div class="copyright">
 					<p><strong>vestify Customers Dashboard</strong> ©  All Rights Reserved</p>
 					<p class="fs-12">Made with <span class="heart"></span> by vestify</p>
+					<div id="google_translate_element"></div>
 				</div>
 			</div>
         </div>
@@ -1085,15 +1094,31 @@
 					</div>
 
 					<!-- TradingView Widget BEGIN -->
-					<div class="tradingview-widget-container">
+					<!-- <div class="tradingview-widget-container">
 						<div id="tradingview_205dd"></div>
 						<div class="tradingview-widget-copyright">
 							<a href="https://www.tradingview.com/symbols/BTCUSDT/?exchange=BINANCE" rel="noopener" target="_blank">
 								<span class="blue-text">AAPL stock chart</span>
 							</a> by TradingView
 						</div>
-					</div>
+					</div> -->
 					<!-- TradingView Widget END -->
+
+					<!-- Crypto Converter ⚡ Widget -->
+						<crypto-converter-widget shadow symbol live background-color="#383a59" border-radius="0.60rem" fiat="united-states-dollar" crypto="bitcoin" amount="1" decimal-places="2"></crypto-converter-widget>
+						<!-- <a href="https://currencyrate.today/" target="_blank" rel="noopener">CurrencyRate.Today</a> -->
+						<script async src="https://cdn.jsdelivr.net/gh/dejurin/crypto-converter-widget@1.5.2/dist/latest.min.js"></script>
+					<!-- /Crypto Converter ⚡ Widget -->
+
+					<script src="https://price-static.crypto.com/latest/public/static/widget/index.js"></script>
+					<div
+						id="crypto-widget-CoinList"
+						data-theme="dark"
+						data-design="classic"
+						data-transparent="true"
+						style="margin-top: 30px;"
+						data-coin-ids="1,166,136,382,20,1120,440,29,1986,418">
+					</div>
 
 					<!-- <div class="col-xl-9 col-xxl-12">
 						<div class="card">
@@ -1752,7 +1777,10 @@
             <div class="copyright">
                 <p>Copyright © Designed &amp; Developed by vestify 2023</p>
             </div>
+
+			
         </div>
+		
         <!--**********************************
             Footer end
         ***********************************-->
@@ -1789,8 +1817,6 @@
 	</div>
 
 
-
-
     <!--**********************************
         Main wrapper end
     ***********************************-->
@@ -1820,7 +1846,7 @@
     <script src="js/custom.min.js"></script>
 	<script src="js/dlabnav-init.js"></script>
 	<!-- <script src="js/demo.js"></script> -->
-	<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+	<!-- <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
 	<script type="text/javascript">
 		new TradingView.widget({
 			"autosize": true,
@@ -1843,33 +1869,9 @@
 			"popup_height": "650",
 			"container_id": "tradingview_205dd"
 		});
-	</script>
-	<!--Start of Tawk.to Script-->
-	<!-- <script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-			s1.async=true;
-			s1.src='https://embed.tawk.to/644e40eb4247f20fefee91c9/1gv8qr62j';
-			s1.charset='UTF-8';
-			s1.setAttribute('crossorigin','*');
-			s0.parentNode.insertBefore(s1,s0);
-		})();
 	</script> -->
-	<!--End of Tawk.to Script-->
 
 	<!-- Start of ChatBot (www.chatbot.com) code -->
-	<!-- <script type="text/javascript">
-		window.__be = window.__be || {};
-		window.__be.id = "6450f682184a9c0007282e74";
-		// window.__be.id
-		(function() {
-			var be = document.createElement('script'); be.type = 'text/javascript'; be.async = true;
-			be.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.chatbot.com/widget/plugin.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(be, s);
-		})();
-	</script> -->
-	<!-- <script src="//code.tidio.co/mqe1ykpa9aprrb6dfzn8pfx0sdifeffv.js" async></script> -->
 	<script src="//code.tidio.co/l45ixjwxvt1fhubgvqneyh1ae0bewimg.js" async></script>
 	<!-- End of ChatBot code -->
     <!-- <script src="js/styleSwitcher.js"></script> -->

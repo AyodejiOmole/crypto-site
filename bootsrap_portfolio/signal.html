@@ -29,7 +29,15 @@
 	
 </head>
 <body id="dashboard_body">
-
+	<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+	<script>
+		function googleTranslateElementInit() {
+			new google.translate.TranslateElement(
+				{pageLanguage: "en"},
+				"google_translate_element"
+			);
+		}
+	</script>
     <!--*******************
         Preloader start
     ********************-->
@@ -967,6 +975,7 @@
 				<div class="copyright">
 					<p><strong>vestify Customers Dashboard</strong> ©  All Rights Reserved</p>
 					<p class="fs-12">Made with <span class="heart"></span> by vestify</p>
+					<div id="google_translate_element"></div>
 				</div>
 			</div>
         </div>
