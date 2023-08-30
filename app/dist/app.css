@@ -19,11 +19,14 @@
 }
 
 :root {
-    --primary: #3772ff;
+    /* --primary: #3772ff; */
+    --primary: #bbdb9b;
     --bg: #fff;
     --bg1: #fff;
     --onsurface: #23262f;
-    --surface: #f7f7f7;
+    /* --surface: #f7f7f7; */
+    /* --surface: #9db4ab; */
+    --surface: #8d9d90;
     --line: #e5e5e5;
     --text: #777e90;
     --second: #58bd7d;
@@ -2909,10 +2912,11 @@ body[data-magic-cursor=hide] .mouse-cursor {
 }
 
 .section-sale {
-    background: linear-gradient(0deg, rgba(50, 29, 95, 0.05), rgba(50, 29, 95, 0.05)), linear-gradient(0deg, rgba(243, 114, 147, 0.1), rgba(243, 114, 147, 0.1)), url("../../assets/images/background/bg-sale-1.png");
+    /* background: linear-gradient(0deg, rgba(50, 29, 95, 0.05), rgba(50, 29, 95, 0.05)), linear-gradient(0deg, rgba(243, 114, 147, 0.1), rgba(243, 114, 147, 0.1)), url("../../assets/images/background/bg-sale-1.png"); */
     background-size: cover;
     position: relative;
     padding: 34px 0;
+    background-color: var(--surface);
 }
 
 .section-sale::before {
