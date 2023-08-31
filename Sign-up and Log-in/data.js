@@ -74,10 +74,11 @@ document.getElementById("btn").addEventListener('click', function () {
             });          
         })
         .catch((error) => {
-            const errorCode = error.code;
+            // const errorCode = error.code;
             const errorMessage = error.message;
-            console.log(errorMessage);
-            alert(errorMessage);
+            if(errorMessage === "Firebase: Error (auth/email-already-in-use).") {
+                alert("This email address is already in use! Please use another email address.");
+            }
         });
 });
 
