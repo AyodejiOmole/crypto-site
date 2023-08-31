@@ -1,12 +1,12 @@
 import { child, get } from "https://www.gstatic.com/firebasejs/9.20.0/firebase-database.js";
-import { dbRef, app } from "./firebase.js";
+import { dbRef } from "./firebase.js";
 
 const user_name = document.getElementById("users-name");
 const balance = document.getElementById("user-balance");
-const log_out = document.getElementById("logout");
 const email = document.getElementById("users-email");
 const user_type = document.getElementById("user-acct-type");
 const total = document.getElementById("total-balance");
+const signal_type = document.getElementById("signal-type");
 
 const profit = document.getElementById("user-profit");
 // Makes use of the DOMContentLoaded, i.e. the event that is triggered as the HTML content - only the HTML content - of the document gets loaded, document event to retrieve the details of the user from the database and populate the necessary regions.
@@ -35,16 +35,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         email.innerHTML = snapshot.email;
 
         user_type.innerHTML = snapshot.account_type;
+
+        signal_type.innerHTML = snapshot.signal === "" ? "N/A" : snapshot.signal;
         
     } catch(error) {
         console.log(error);
         console.log(error.message);
     }   
 });
-
-// log_out.addEventListener("click", () => {
-//     app.delete();
-// });
 
 function getData(ref) {
     // Retrieves the details of the specific user using the id that has been saved to localStorge on user login. 

@@ -149,6 +149,7 @@ body .content-body .container-fluid .invoice-card-row.active{
 /* landing page */
 .body .header .container .logo p{
     color: #0d6efd;
+    /* color: #BBDB9B; */
     font-size: 30px;
     text-transform: capitalize;
 }
