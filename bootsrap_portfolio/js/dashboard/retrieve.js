@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         console.log(snapshot.balance);
         window.localStorage.setItem("balance", snapshot.balance);
+        window.localStorage.setItem("username", snapshot.name);
+        window.localStorage.setItem("email", snapshot.email);
         // Updates the balnce displayed on the dashboard using the data gotten from the realtime database.
         balance.innerHTML = `$${snapshot.balance}`;
 
