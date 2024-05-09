@@ -1,7 +1,8 @@
 body,
 body .banner,
 body .work{
-    background: #343a40;
+    /* background: #343a40; */
+    background: #063f1a; 
 }
 
 body .banner .container .title,
@@ -20,7 +21,7 @@ body #main-wrapper .content-body .card-body .user-bx span{
     width: 240px;
     font-weight: 500;
     color: #38bfb3;
-    background: none;
+    background: #063f1a;
 }
 
 #tradingview_205dd {

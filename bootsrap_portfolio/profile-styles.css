@@ -94,7 +94,8 @@
     --gray-dark: #343a40;
     --primary: #0971fe;
     --secondary: #364a63;
-    --success: #1ee0ac;
+    /* --success: #1ee0ac; */
+    --success: #91cfa6;
     --info: #09c2de;
     --warning: #f4bd0e;
     --danger: #e85347;
@@ -7849,7 +7850,8 @@ button.bg-secondary:focus {
 }
 
 .bg-success {
-    background-color: #1ee0ac !important;
+    /* background-color: #1ee0ac !important; */
+    background-color: #91cfa6 !important;
 }
 
 a.bg-success:hover,

@@ -17,6 +17,7 @@ body {
     width: 900px;
     height: auto;
     background-color: #fff;
+    /* background-color: #fef6e8; */
     /* position: absolute; */
     display: flex;
     justify-content: space-between;
