@@ -98,11 +98,11 @@ body {
     /* font-size: 4rem; */
     font-weight: 700;
     padding: 10px 0px;
-    color: #0d6efd;
+    color: #66440a;;
 }
 #form input {
     border:none;
-    border-bottom:3px solid #0d6efd;
+    border-bottom:3px solid #66440a;
     width: 350px;
     /* width: 100%; */
     margin: 10px 0px;
@@ -115,7 +115,7 @@ body {
 
 #form select {
     border:none;
-    border:3px solid #0d6efd;
+    border:3px solid #66440a;;
     width: 350px;
     /* width: 100%; */
     margin: 10px 0px;
@@ -131,7 +131,7 @@ body {
     position: relative;
     left: 80px;
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #66440a;
     border:none;
     outline: none;
     border-radius: 5px;
