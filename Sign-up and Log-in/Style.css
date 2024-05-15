@@ -83,7 +83,7 @@ body {
 }
 .content p  a {
     text-decoration: none;
-    color:#0d6efd;
+    color:#66440a;
     font-weight: bolder;
     font-size: 1.1rem;
     border: none;
@@ -144,7 +144,7 @@ body {
     position: relative;
     left: 80px;
     color: #fff;
-    background-color: #0d6efd;
+    background-color: #66440a;
     border:none;
     outline: none;
     border-radius: 5px;
@@ -245,7 +245,7 @@ body {
     }
     .content p  a {
         text-decoration: none;
-        color:#0d6efd;
+        color:#66440a;
         font-weight: bolder;
         font-size: 1rem;
         border: none;
@@ -264,7 +264,7 @@ body {
     }
     #form input {
         border:none;
-        border-bottom:3px solid #0d6efd;
+        border-bottom:3px solid #66440a;
         width: 350px;
         margin: 10px 0px;
         outline: none;
@@ -279,7 +279,7 @@ body {
         position: relative;
         left: 100px;
         color: #fff;
-        background-color: #0d6efd;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
@@ -383,11 +383,11 @@ body {
         font-size: 1rem;
         font-weight: 700;
         padding: 8px 0px;
-        color: #0d6efd;
+        color: #66440a;
     }
     #form input {
         border:none;
-        border-bottom:3px solid #0d6efd;
+        border-bottom:3px solid #66440a;
         /* width: 300px; */
         width: 100%;
         margin: 5px 0px;
@@ -403,7 +403,7 @@ body {
         /* position: relative;
         left: 100px; */
         color: #fff;
-        background-color: #0d6efd;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
@@ -417,7 +417,7 @@ body {
         position: relative;
         left: 2px;
         color: #fff;
-        background-color: #0d6efd;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
@@ -475,7 +475,7 @@ body {
     }
     .content p  a {
         text-decoration: none;
-        color:#0d6efd;
+        color:#66440a;
         font-weight: bolder;
         font-size: 1rem;
         border: none;
@@ -492,11 +492,11 @@ body {
         font-weight: 700;
         padding: 8px 0px;
         /* text-align: left; */
-        color: #0d6efd;
+        color: #66440a;
     }
     #form input {
         border:none;
-        border-bottom:3px solid #0d6efd;
+        border-bottom:3px solid #66440a;
         /* width: 250px; */
         width: 90%;
         margin: 5px 0px;
@@ -508,6 +508,7 @@ body {
     }
     #form select {
         width: 90%;
+        color: #66440a;
     }
     #btn{
         text-align: center;
@@ -515,7 +516,7 @@ body {
         position: relative;
         left: 0px;
         color: #fff;
-        background-color: #0d6efd;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
@@ -575,7 +576,7 @@ body {
     }
     .content p  a {
         text-decoration: none;
-        color:#1FAB89;
+        color:#66440a;
         font-weight: bolder;
         font-size: 1rem;
         border: none;
@@ -589,11 +590,11 @@ body {
         font-size: 0.7rem;
         font-weight: 700;
         padding: 8px 0px;
-        color: #999c9a;
+        color: #66440a;
     }
     #form input {
         border:none;
-        border-bottom:3px solid #1FAB89;
+        border-bottom:3px solid #66440a;
         width: 90%;
         margin: 10px 0px;
         outline: none;
@@ -613,7 +614,7 @@ body {
         /* left: 40px; */
         top: 10px;
         color: #fff;
-        background-color: #1FAB89;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
@@ -661,7 +662,7 @@ body {
     }
     .content p  a {
         text-decoration: none;
-        color:#1FAB89;
+        color:#66440a;
         font-weight: bolder;
         font-size: 1rem;
         border: none;
@@ -675,11 +676,11 @@ body {
         font-size: 0.7rem;
         font-weight: 700;
         padding: 8px 0px;
-        color: #999c9a;
+        color: #66440a;
     }
     #form input {
         border:none;
-        border-bottom:3px solid #1FAB89;
+        border-bottom:3px solid #66440a;
         width: 90%;
         margin: 10px 0px;
         outline: none;
@@ -694,7 +695,7 @@ body {
         /* position: relative;
         left: 60px; */
         color: #fff;
-        background-color: #1FAB89;
+        background-color: #66440a;
         border:none;
         outline: none;
         border-radius: 5px;
