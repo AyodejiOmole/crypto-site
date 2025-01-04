@@ -6,25 +6,52 @@ document.addEventListener("DOMContentLoaded", async () => {
     let countries = [];
     const countrySelect = document.getElementById("country");
 
-    const response = await fetch("https://restcountries.com/v3.1/all");
-    const jsonData = await response.json();
-    console.log(jsonData);
+    // const response = await fetch("https://restcountries.com/v3.1/all");
+    // const jsonData = await response.json();
+    // console.log(jsonData);
     
-    for (const value of jsonData) {
-        let country = value.name.common;
-        countries.push(country);
-    }
+    // for (const value of jsonData) {
+    //     let country = value.name.common;
+    //     countries.push(country);
+    // }
+    
+     fetch('./output.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Failed to load JSON file');
+        }
+        return response.json(); // Parse JSON data
+      })
+      .then(data => {
+          console.log(data);
+          data.data.forEach((item) => {
+                let country = item.value;
+                countries.push(country);
+          })
+
+            // Sort in alphabetical order
+            countries.sort();
+
+            countries.forEach((country) => {
+                var option = document.createElement("option");
+                option.value = country;
+                option.text = country;
+        
+                countrySelect.appendChild(option);
+            });
+      })
+      .catch(error => console.error('Error:', error));
 
     // Sort in alphabetical order
-    countries.sort();
+    // countries.sort();
 
-    countries.forEach((country) => {
-        var option = document.createElement("option");
-        option.value = country;
-        option.text = country;
+    // countries.forEach((country) => {
+    //     var option = document.createElement("option");
+    //     option.value = country;
+    //     option.text = country;
 
-        countrySelect.appendChild(option);
-    });
+    //     countrySelect.appendChild(option);
+    // });
 });
 
 document.getElementById("btn").addEventListener('click', function () {
